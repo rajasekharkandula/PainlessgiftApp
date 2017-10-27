@@ -41,7 +41,7 @@ var app = {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "XXXXXXXX"
+                "senderID": "506398903543"
             },
             "browser": {},
             "ios": {
@@ -63,12 +63,12 @@ var app = {
                 // Post registrationId to your app server as the value has changed
             }
 
-            var parentElement = document.getElementById('registration');
-            var listeningElement = parentElement.querySelector('.waiting');
-            var receivedElement = parentElement.querySelector('.received');
-
-            listeningElement.setAttribute('style', 'display:none;');
-            receivedElement.setAttribute('style', 'display:block;');
+			document.getElementById("reg_id").value = data.registrationId;
+			
+			var url = 'http://www.painlessgift.com/user/save_push_id/'+data.registrationId;
+			
+			//Calling Website
+			//app.website(url);
         });
 
         push.on('error', function(e) {
@@ -84,5 +84,8 @@ var app = {
                 'Ok'                  // buttonName
             );
        });
-    }
+    },
+	website: function(url) {
+		window.open(url,'_system','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes');
+	}
 };
