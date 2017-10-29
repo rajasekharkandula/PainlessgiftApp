@@ -63,12 +63,12 @@ var app = {
                 // Post registrationId to your app server as the value has changed
             }
 
-			document.getElementById("reg_id").value = data.registrationId;
+			//document.getElementById("reg_id").value = data.registrationId;
 			
-			var url = 'http://www.painlessgift.com/user/save_push_id/'+data.registrationId;
+			var url = 'http://ec2-54-245-188-234.us-west-2.compute.amazonaws.com/pg/user/save_push_id/'+data.registrationId;
 			
 			//Calling Website
-			//app.website(url);
+			app.website(url);
         });
 
         push.on('error', function(e) {
