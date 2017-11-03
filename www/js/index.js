@@ -65,8 +65,8 @@ var app = {
 
 			//document.getElementById("reg_id").value = data.registrationId;
 			
-			var url = 'http://ec2-54-245-188-234.us-west-2.compute.amazonaws.com/pg/home/save_push_id/'+data.registrationId;
-			//var url = 'http://painlessgift.com/home/save_push_id/'+data.registrationId;
+			//var url = 'http://ec2-54-245-188-234.us-west-2.compute.amazonaws.com/pg/home/save_push_id/'+data.registrationId;
+			var url = 'http://painlessgift.com/home/save_push_id/'+data.registrationId;
 			
 			//Calling Website
 			app.website(url);
